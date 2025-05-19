@@ -32,7 +32,7 @@
 </div>
 </div>
 
-    <div v-if="!isOpen" class=" flex flex-col px-2  space-y-2  rounded  overflow-auto">
+    <div v-if="isOpen" class=" flex flex-col px-2  space-y-2  rounded  overflow-auto">
       <label
         v-for="(option, index) in options"
         :key="index"
@@ -83,7 +83,7 @@ const isEmpty = computed(() => selectedValues.value.length === 0);
 
 const emit = defineEmits(['update:modelValue']);
 
-const isOpen = ref(false);
+const isOpen = ref(true);
 const selectedValues = ref([...props.modelValue]);
 
 function toggleOpen() {

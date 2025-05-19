@@ -7,7 +7,7 @@
           <img class="h-6 w-6" :src="Clock" alt="Clock" />
           <h2>Time Remaining</h2>
         </div>
-        <span>{{ formattedTime }}</span>
+        <span class="font-bold">{{ formattedTime }}</span>
       </div>
 
       <div class=" overflow-hidden bg-[#f9dcde] w-full h-2 rounded">
@@ -162,10 +162,6 @@ const time = 30 * 60;
 const timeLeft = ref(time);
 
 const showLayoverTime= ref(false)
-
-
-
-
 const selectedStops = ref([]);
 const selectedAirlines = ref([]);
 const selectedBaggage = ref([]);

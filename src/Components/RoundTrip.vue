@@ -2,7 +2,7 @@
 
 <template>
   <div class="container bg-[#ebeff4] py-5 mx-auto">
-    <div class="flex gap-5 lg:mx-60 bg-transparent ">
+    <div class="flex gap-1 lg:mx-60 bg-transparent ">
       <!-- Left Column -->
        
          <LeftSide class="hidden lg:block sticky"/>
