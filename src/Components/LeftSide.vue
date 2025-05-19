@@ -49,7 +49,7 @@
       >
         <span class="font-medium">Price Range</span>
         <img
-          v-if="!showPrice"
+          v-if="showPrice"
           :src="up_arrow"
           class="h-5 w-5"
           alt="Up Arrow"
@@ -61,7 +61,7 @@
           alt="Down Arrow"
         />
       </button>
-      <div v-if="showPrice" class="mt-3 px-3">
+      <div v-if="!showPrice" class="mt-3 px-3">
         <input
           type="range"
           min="0"
@@ -113,7 +113,7 @@
       >
         <span class="font-medium">Layover Time</span>
         <img
-          v-if="!showLayoverTime"
+          v-if="showLayoverTime"
           :src="up_arrow"
           class="h-5 w-5"
           alt="Up Arrow"
@@ -125,7 +125,7 @@
           alt="Down Arrow"
         />
       </button>
-      <div v-if="showLayoverTime" class="mt-3 px-3">
+      <div v-if="!showLayoverTime" class="mt-3 px-3">
         <input
           type="range"
           min="0"
@@ -133,7 +133,7 @@
           v-model="layoverTime"
           class="w-full"
         />
-        <div class="text-sm mt-1"> {{ layoverTime }} hr</div>
+        <div class="text-sm mt-1">   {{ layoverTime || 0 }} hr</div>
       </div>
     </div>
 
@@ -190,18 +190,13 @@ const progressBarStyle = computed(() => {
 });
 
 // Countdown function
-function startCountdown() {
+onMounted(() => {
   setInterval(() => {
     if (timeLeft.value > 0) {
-      timeLeft.value--;
+      timeLeft.value--
     }
-  }, 1000);
-}
-
-// Start the countdown when the component is mounted
-onMounted(() => {
-  startCountdown();
-});
+  }, 1000)
+})
 
 // Function to toggle the price range visibility
 function togglePrice() {

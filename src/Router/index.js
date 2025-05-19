@@ -7,6 +7,7 @@ import PaymentInfo from '../Components/PaymentInfo.vue';
 import TravelerInfo from '../Components/TravellerInfo.vue';
 import AddOns from '../Components/AddOns.vue';
 import MainLayout from '../MainLayout.vue';
+import ViewDetails from '../Components/ViewDetails.vue';
 
 const routes = [
   {
@@ -19,6 +20,7 @@ const routes = [
       { path: 'PaymentInfo', component: PaymentInfo },
       { path: 'TravelerInfo', component:  TravelerInfo},
       { path: 'AddOns', component:  AddOns},
+      { path: 'ViewDetails', component:  ViewDetails},
  
     ],
   },
