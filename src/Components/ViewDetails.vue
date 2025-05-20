@@ -1,8 +1,8 @@
 <template>
-  <div class="Tabs p-1 flex flex-col items-center">
+  <div class="Tabs  flex flex-col w-full  mt-4">
 
     <!-- tab headers -->
-    <div class="tabContainer grid grid-cols-3 w-full max-w-md">
+    <div class="tabContainer grid grid-cols-3 ">
       <label
         class="text-center p-3 cursor-pointer rounded-t-lg"
         :class="status === 'flight-details'
@@ -53,7 +53,7 @@
     </div>
 
     <!-- tab contents -->
-    <div class="w-full max-w-md p-4 bg-white rounded-b-lg border-t-0 border border-gray-200">
+    <div class="w-full  p-4 bg-white rounded-b-lg border-t-0 border border-gray-200">
       <div v-if="status === 'flight-details'">
         <!-- your Flight Details markup -->
         <FlightDetails/>

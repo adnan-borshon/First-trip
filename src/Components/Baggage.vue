@@ -1,7 +1,7 @@
 <template>
     <div class="container grid auto-rows-min gap-3">
    <!-- checkbox -->
-        <div class="flex justify-center gap-1">
+        <div class="flex  gap-1">
             <label class="text-[#d82128] cursor-pointer  font-semibold text-lg">
                 <input 
                 class="accent-[#d82128]"

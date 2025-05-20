@@ -1,5 +1,5 @@
 <template>
-  <div class="right bg-transparent grid-rows-4">
+  <div class="right bg-transparent grid-rows-4 p-2">
     <div class="p-2 row-start-1">Showing 1016 Flights & 3 Airlines</div>
     
     <!-- CHeapest, Fastest and Earliest card -->
@@ -9,7 +9,7 @@
           <div
         @click="selected = 'cheapest'"
         :class="[
-          'flex h-max space-x-2 cursor-pointer items-center p-2 rounded-lg shrink',
+          'flex  h-max space-x-2 justify-center md:justify-start cursor-pointer items-center p-2 rounded-lg shrink',
           selected === 'cheapest'
             ? 'bg-[#f9dcde] border-b-2 border-[#d82128]'
             : 'bg-white'
@@ -17,21 +17,22 @@
       >
         <div
           :class="[
-            'p-3 rounded-lg',
+            'p-3 rounded-lg hidden md:block',
             selected === 'cheapest' ? 'bg-[#d82128]' : ''
           ]"
         >
           <img 
           v-if="selected !== 'cheapest' "
           class="h-7 w-7 filter
-         brightness-0" :src="cheapest" />
+         brightness-0 " :src="cheapest" />
             <img 
           v-else
           class="h-7 w-7 " :src="cheapest" />
         </div>
         <div class="font-semibold">
-          <div>Cheapest</div>
-          <span class="text-xs">19,000 tk</span>
+          <div :class="[selected === 'cheapest' ? 'text-[#d82128]':'']">Cheapest</div>
+          <span class="text-xs hidden md:block"
+          :class="[selected === 'cheapest' ? 'text-[#d82128]':'']">19,000 tk</span>
         </div>
       </div>
 
@@ -39,7 +40,7 @@
            <div
         @click="selected = 'fastest'"
         :class="[
-          'flex h-max space-x-2 cursor-pointer items-center p-2 rounded-lg shrink',
+          'flex h-max space-x-2 justify-center md:justify-start cursor-pointer items-center p-2 rounded-lg shrink',
           selected === 'fastest'
             ? 'bg-[#f9dcde] border-b-2 border-[#d82128]'
             : 'bg-white'
@@ -47,7 +48,7 @@
       >
         <div
           :class="[
-            'p-3 rounded-lg',
+            'p-3 rounded-lg hidden md:block',
             selected === 'fastest' ? 'bg-[#d82128]' : ''
           ]"
         >
@@ -55,8 +56,9 @@
           <img v-else class="h-7 w-7 " :src="fastest" />
         </div>
         <div class="font-semibold">
-          <div>Fastest</div>
-          <span class="text-xs">21h 30m</span>
+          <div :class="[selected === 'fastest' ? 'text-[#d82128]':'']">Fastest</div>
+          <span class="text-xs hidden md:block"
+          :class="[selected === 'fastest' ? 'text-[#d82128]':'']">21h 30m</span>
         </div>
       </div>
 
@@ -64,7 +66,7 @@
             <div
         @click="selected = 'earliest'"
         :class="[
-          'flex h-max space-x-2 cursor-pointer items-center p-2 rounded-lg shrink',
+          'flex h-max  space-x-2 justify-center md:justify-start cursor-pointer items-center p-2 rounded-lg shrink',
           selected === 'earliest'
             ? 'bg-[#f9dcde] border-b-2 border-[#d82128]'
             : 'bg-white'
@@ -72,7 +74,7 @@
       >
         <div
           :class="[
-            'p-3 rounded-lg',
+            'p-3 rounded-lg hidden md:block',
             selected === 'earliest' ? 'bg-[#d82128]' : ''
           ]"
         >
@@ -80,8 +82,11 @@
           <img v-else class="h-7 w-7 " :src="earliest">
         </div>
         <div class="font-semibold">
-          <div>Earliest</div>
-          <span class="text-xs">07:10</span>
+          <div 
+          
+          :class="[selected === 'earliest' ? 'text-[#d82128]':'']">Earliest</div>
+          <span class="text-xs hidden md:block" 
+          :class="[selected === 'earliest' ? 'text-[#d82128]':'']">07:10</span>
         </div>
       </div>
     </div>
@@ -102,9 +107,11 @@
     </div>
 
     <!-- main card for timing and selection -->
-  <div>
-    <SelectionCard/>
-  </div>
+ 
+
+    <SelectionCard  :plane-icon="plane"/>
+ 
+ 
   </div>
 </template>
 
@@ -114,6 +121,11 @@ import earliest from "../assets/Icons/early.png";
 import fastest from "../assets/Icons/fastest.png";
 import airline from "../assets/Icons/airline-logo.jpg";
 import SelectionCard from "./SelectionCard.vue";
+import plane from "../assets/Icons/layover-non-stop.svg";
+import plane_Multi from "../assets/Icons/layover-multi.svg";
 import { ref } from "vue";
+
 const selected = ref('cheapest')
+
+
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="left  bg-transparent space-y-2 flex-1/7 grid grid-rows-[auto_auto_auto,1fr]">
+  <div class="left  bg-transparent space-y-2  lg:grid grid-rows-[auto_auto_auto,1fr] hidden  sticky md:w-1/4">
     <!-- Time Remaining part with changing time and timebar -->
     <div class=" p-1 space-y-2">
       <div class="flex justify-between">
@@ -19,11 +19,21 @@
     </div>
 
     <!-- Departure and Return Times -->
+    <template v-if="props.showDepart_return">
+
+   
+    
     <div class="flex justify-between items-center p-2 space-x-1 bg-white rounded-full">
       <div class="bg-white flex justify-center items-center shadow-lg rounded-full">
         <img class="h-11 w-11 " :src="left_arrow" >
       </div>
-      <div><h1>Departure</h1><div>20 May, Tuesday</div></div>
+      <div class="text-sm">
+        <h1 class="font-semibold">Departure</h1>
+        <span>
+
+          20 May, Tuesday
+        </span>
+      </div>
        <div class="bg-white  flex justify-center items-center shadow-lg rounded-full">
         <img class="h-11  w-11" :src="right_arrow" >
       </div>
@@ -33,11 +43,18 @@
         <div class="bg-white  flex justify-center items-center shadow-lg rounded-full">
         <img class="h-11  w-11" :src="left_arrow" >
       </div>
-      <div><h1>Return</h1><div>23 May, Tuesday</div></div>
+      <div class="text-sm">
+        <h1 class="font-semibold">Return</h1>
+        <span>
+
+          20 May, Tuesday
+        </span>
+      </div>
   <div class="bg-white  flex justify-center items-center shadow-lg rounded-full">
         <img class="h-11  w-11" :src="right_arrow" >
       </div>
     </div>
+     </template>
 <div class="options bg-white rounded-2xl p-1">
 
 
@@ -133,7 +150,7 @@
           v-model="layoverTime"
           class="w-full"
         />
-        <div class="text-sm mt-1">   {{ layoverTime || 0 }} hr</div>
+        <div class="text-sm mt-1">   {{ layoverTime }} hr</div>
       </div>
     </div>
 
@@ -160,7 +177,7 @@ const showPrice = ref(false);
 const price = ref(500);
 const time = 30 * 60; 
 const timeLeft = ref(time);
-
+const layoverTime = ref(0);
 const showLayoverTime= ref(false)
 const selectedStops = ref([]);
 const selectedAirlines = ref([]);
@@ -168,6 +185,12 @@ const selectedBaggage = ref([]);
 const selectedRefund = ref([]);
 const selectedLayover = ref([]);
 const selectedAircraft = ref([]);
+
+
+
+const props = defineProps({
+  showDepart_return: { type: Boolean, default: true }
+})
 
 
 // Computed property for formatted time
