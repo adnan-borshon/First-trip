@@ -1,12 +1,26 @@
 <template>
   <div class="relative md:grid grid-cols-3 gap-1 m-2 shrink-0 rounded-lg p-1 lg:p-2 bg-white overflow-hidden">
     <!-- for larger screen -->
-    <div class="hidden md:block absolute h-5 w-5 rounded-full bg-gray-100 right-[32.7%] -top-2"></div>
-    <div class="hidden md:block absolute h-5 w-5 rounded-full bg-gray-100 right-[32.7%] -bottom-2"></div>
+ <div
+  class="hidden md:block absolute left-[66.22%] -translate-x-1/2 -top-2
+         h-5 w-5 rounded-full bg-gray-100"
+></div>
+<div
+  class="hidden md:block absolute left-[66.22%] -translate-x-1/2 -bottom-2
+         h-5 w-5 rounded-full bg-gray-100"
+></div>
+
 
       <!-- for mobile screen -->
-    <div class="md:hidden absolute h-6 w-6 rounded-full bg-gray-100 -right-2.5 bottom-[31%] "></div>
-    <div class="md:hidden absolute h-6 w-6 rounded-full bg-gray-100 -left-2.5 bottom-[31%] "></div>
+    <div
+  class="md:hidden absolute top-[66%] -translate-y-1/2 -right-2.5
+         h-6 w-6 rounded-full bg-gray-100"
+></div>
+<div
+  class="md:hidden absolute top-[66%] -translate-y-1/2 -left-2.5
+         h-6 w-6 rounded-full bg-gray-100"
+></div>
+
 
       
     <div
@@ -230,7 +244,7 @@
       <div class="row-start-4 py-2 px-3">
         <router-link
         to="/TravelerInfo"
-          class="bg-[#d82128] flex justify-center px-2 w-full py-1 rounded-full font-semibold text-white hover:bg-red-500"
+          class="bg-[#d82128] flex justify-center px-2 w-full py-1 rounded-full font-semibold text-white transform duration-200 ease-in hover:opacity-80"
           >Select</router-link
         >
       </div>

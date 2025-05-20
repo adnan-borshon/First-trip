@@ -78,5 +78,5 @@ import Baggage from './Baggage.vue';
 import Policy from './Policy.vue';
 
 
-const status = ref('flight-details')  // default tab
+const status = ref('flight-details')  
 </script>

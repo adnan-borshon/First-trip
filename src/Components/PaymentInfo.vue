@@ -1,3 +1,1 @@
-<template>
-    <div>Payment PaymentInfo</div>
-</template>
+<template></template>
