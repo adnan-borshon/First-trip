@@ -10,7 +10,7 @@
     >
       <div>
         <h2 class="text-xl text-start font-semibold">Wheel Chair</h2>
-        <p class="mt-1 text-sm text-gray-600">
+        <p class="mt-1 text-start text-sm text-gray-600">
           Wheelchair services are available if provided by the airline, subject to availability.
         </p>
       </div>
@@ -94,7 +94,7 @@
     >
       <div>
         <h2 class="text-xl text-start font-semibold">Travel Insurance</h2>
-        <p class="mt-1 text-sm text-gray-600">
+        <p class="mt-1 text-start text-sm text-gray-600">
           Protect your trip with our comprehensive insurance options.
         </p>
       </div>

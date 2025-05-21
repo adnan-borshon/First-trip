@@ -1,6 +1,6 @@
 <template>
-<div class="container grid grid-rows-3 bg-white rounded-xl mb-3">
-    <div class="row-span-2 gap-3 grid grid-rows-2 px-4 py-2 ">
+<div class="container grid grid-rows-[200px_auto] bg-white rounded-xl mb-3 ">
+    <div class=" gap-3 row-span-2 grid grid-rows-1 px-4 py-2 ">
         <div class="flex flex-col ">
             <h2 class="font-semibold">Fare Summary</h2>
             <div class="flex justify-center items-center">
@@ -9,15 +9,42 @@
             </div>
             <span class="text-gray-500 text-sm">Round Trip</span>
         </div>
-        <div class="space-y-2">
-            <div class="flex justify-between">
-                <div class="flex justify-start items-center">
-                    <span>Air Fare</span>
-                    <img :src="down_arrow" class="h-4 w-4">
+        <div class="space-y-2 ">
+            <!-- Airfare part -->
+            <div 
+            class=""
+                 :class="selectAirFare ? 'bg-blue-100 p-2 rounded-xl space-y-3' :''">
+            <div class="flex justify-between ">
 
-                </div>
+                <div
+                @click="selectAirFare= !selectAirFare"
+                
+                class="flex justify-start items-center cursor-pointer">
+                <span>Air Fare</span>
+                <img 
+                :class="{ 'transform rotate-180': selectAirFare }"
+                :src="down_arrow" class="h-3 w-3">
+                
+            </div>
+            
+            <span class=" font-semibold">BDT 10,398</span>
+        </div>
+        
+            <span v-if="selectAirFare">Adult X 1</span>
+        
+        <div 
+        v-if="selectAirFare"
+        class="flex justify-between">
+            <span class="text-gray-600 ">Base Fair</span>
+            <span class="font-semibold">BDT 8,050</span>
+        </div>
+          <div
+          v-if="selectAirFare"
+           class="flex justify-between">
+            <span class="text-gray-600 ">Tax</span>
+            <span class="font-semibold">BDT 2,050</span>
+        </div>
 
-                <span class="text-sm">BDT 10,398</span>
 
             </div>
             <div class="flex justify-between items-center text-[#ff620a]">
@@ -36,7 +63,7 @@
         </div>
 
     </div>
-<div class="w-full bg-[#fff5f6] row-span-1 rounded-b-lg">
+<div class="w-full bg-[#fff5f6]  rounded-b-lg py-4">
      <div class="grid grid-row-3 px-4 py-1">
 
             <div >
@@ -66,4 +93,7 @@ import plane from "../assets/Icons/airline-logo.jpg"
 import down_arrow from "../assets/Icons/down-arrow.png"
 import up_arrow from "../assets/Icons/up-arrow.png"
 import info from "../assets/Icons/exm-sign.svg"
+import { ref } from "vue"
+
+const selectAirFare = ref(false)
 </script>

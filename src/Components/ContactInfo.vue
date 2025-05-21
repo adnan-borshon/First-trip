@@ -1,21 +1,21 @@
 <template>
-<div class="contactInfo space-y-8">
+<div class="contactInfo space-y-8 overflow-hidden">
 
 
-      <div class="flex gap-4 items-center">
-        <h1 class="text-lg font-semibold">Traveller</h1>
-        <span class="px-4 py-2 border rounded-xl">Adult</span>
-        <span class="text-white bg-green-700 rounded-xl px-4 py-2">Primary Traveller</span>
-        <div class="flex bg-gray-50 rounded-xl px-4 py-2 items-center">
+      <div class="flex gap-4 items-center justify-start ">
+        <h1 class="md:text-lg font-semibold">Traveller</h1>
+        <span class="md:px-4 md:py-2 p-2 text-xs md:text-sm border rounded-xl">Adult</span>
+        <span class="text-white bg-green-700 rounded-xl text-xs text-center md:text-sm p-2 md:px-4 md:py-2">Primary Traveller</span>
+        <div class="flex bg-gray-50 rounded-xl text-xs text-center md:text-sm p-2 md:px-4 md:py-2 items-center">
             <span >Saved Traveller</span>
             <img src="" alt="">
         </div>
       </div>
     <!-- Personal Info Header -->
     <div>
-      <h2 class="text-xl font-semibold">
+      <h2 class="md:text-xl font-semibold">
         Personal Info
-        <span class="text-sm font-normal text-gray-500">
+        <span class=" text-xs md:text-sm font-normal text-gray-500">
           As mentioned on your passport or government approved IDs
         </span>
       </h2>

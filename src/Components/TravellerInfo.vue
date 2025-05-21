@@ -1,13 +1,13 @@
 <template >
     <div class="container bg-gray-300 md:flex justify-center items-center p-2">
          
-        <div class="grid  lg:grid-cols-14 grid-rows-[auto_auto] gap-3 md:p-2">
+        <div class="flex-1 md:mx-20 lg:mx-40 md:grid space-y-3 grid-cols-15 grid-rows-[auto_auto] p-2 gap-3 md:p-2">
 
          <!-- Tabs -->
-      <div class=" col-span-7 md:col-span-10  row-span-1 grid grid-cols-4 rounded-lg md:rounded-full bg-gray-100">
+      <div class=" md:col-span-10 text-sm  justify-between flex row-span-1 md:grid grid-cols-4 rounded-lg md:rounded-full bg-white md:bg-gray-100">
         <!-- 1. Traveller Info always enabled -->
         <label
-          class="text-center px-2 py-1 md:p-4 rounded-lg md:rounded-full cursor-pointer"
+          class="text-center  px-3 py-2 md:p-4 rounded-lg md:rounded-full cursor-pointer"
           :class="Status==='TravelerInfo'
             ? 'bg-[#f9dcde] text-[#d82128] border-[#d82128]'
             : ''"
@@ -19,9 +19,9 @@
         <!-- 2. Add-ons only after Traveller Info -->
         <label
           :class="[
-            'text-center px-2 py-1 md:p-4 rounded-lg md:rounded-full',
+            'text-center px-3 py-2 md:p-4 rounded-lg md:rounded-full cursor-pointer',
             Status==='AddOns' 
-              ? 'bg-[#f9dcde] text-[#d82128] border-[#d82128] cursor-pointer'
+              ? 'bg-[#f9dcde] text-[#d82128] border-[#d82128] '
               : ''
           ]"
           @click="tryTab('AddOns')"
@@ -32,9 +32,9 @@
         <!-- 3. Payment Info only after Add-ons -->
         <label
           :class="[
-            'text-center  px-2 py-1 md:p-4 rounded-lg md:rounded-full',
+            'text-center  px-3 py-2 md:p-4 rounded-lg md:rounded-full cursor-pointer',
             Status==='Payment'
-              ? 'bg-[#f9dcde] text-[#d82128] border-[#d82128] cursor-pointer'
+              ? 'bg-[#f9dcde] text-[#d82128] border-[#d82128] '
               : Status==='AddOns'
                 ? 'cursor-pointer hover:bg-gray-100'
                 : ''
@@ -47,9 +47,9 @@
         <!-- 4. Preview only after Payment Info -->
         <label
           :class="[
-            'text-center px-2 py-1 md:p-4 rounded-lg md:rounded-full',
+            'text-center px-3 py-2 md:p-4 rounded-lg md:rounded-full cursor-pointer',
             Status==='preview'
-              ? 'bg-[#f9dcde] text-[#d82128] border-[#d82128] cursor-pointer'
+              ? 'bg-[#f9dcde] text-[#d82128] border-[#d82128] '
               : Status==='Payment'
                 ? 'cursor-pointer hover:bg-gray-100'
                 : ''
@@ -61,7 +61,7 @@
       </div>
 
         <!-- time bar -->
-    <div class="hidden lg:block col-span-4 row-span-1">
+    <div class="hidden lg:block col-span-5 row-span-1 ">
           <div class=" p-1 space-y-2">
       <div class="flex justify-between">
         <div class="flex">
@@ -83,21 +83,21 @@
 
     <div 
     v-if="Status === 'TravelerInfo'"
-    class="p-6 col-span-7 md:col-span-10   bg-white rounded-xl">
+    class="p-6  md:col-span-10   bg-white rounded-xl">
 <ContactInfo/> 
  
 </div>
    <div
    v-else-if="Status==='AddOns'"
-   class="col-span-7 md:col-span-10  rounded-xl">
+   class="p-2  md:col-span-10 bg-white rounded-xl">
 <AddOns/> 
  
 </div>
-    <div class="col-span-7 md:col-span-4 row-span-3  md:sticky md:top-4 self-start">
+    <div class=" md:col-span-5 row-span-3  md:sticky md:top-4 self-start">
 
         <FareSummary/>
     </div>
-    <div class=" col-span-7 md:col-span-10 md:row-start-3 flex justify-center md:justify-end py-2 px-3">
+    <div class="  md:col-span-10 md:row-start-3 flex justify-center md:justify-end py-2 px-3">
         <button
           @click="saveAndContinue"
           class="bg-[#d82128] w-max text-white font-semibold px-6 py-2 rounded-full hover:opacity-80 transition-opacity duration-200"
