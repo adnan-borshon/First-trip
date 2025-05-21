@@ -3,19 +3,19 @@
 
 
       <div class="flex gap-4 items-center justify-start ">
-        <h1 class="md:text-lg font-semibold">Traveller</h1>
-        <span class="md:px-4 md:py-2 p-2 text-xs md:text-sm border rounded-xl">Adult</span>
-        <span class="text-white bg-green-700 rounded-xl text-xs text-center md:text-sm p-2 md:px-4 md:py-2">Primary Traveller</span>
-        <div class="flex bg-gray-50 rounded-xl text-xs text-center md:text-sm p-2 md:px-4 md:py-2 items-center">
+        <h1 class="lg:text-lg font-semibold">Traveller</h1>
+        <span class="lg:px-4 lg:py-2 p-2 text-xs lg:text-sm border rounded-xl">Adult</span>
+        <span class="text-white bg-green-700 rounded-xl text-xs text-center lg:text-sm p-2 lg:px-4 lg:py-2">Primary Traveller</span>
+        <div class="flex bg-gray-50 rounded-xl text-xs text-center lg:text-sm p-2 lg:px-4 lg:py-2 items-center">
             <span >Saved Traveller</span>
             <img src="" alt="">
         </div>
       </div>
     <!-- Personal Info Header -->
     <div>
-      <h2 class="md:text-xl font-semibold">
+      <h2 class="lg:text-xl font-semibold">
         Personal Info
-        <span class=" text-xs md:text-sm font-normal text-gray-500">
+        <span class=" text-xs lg:text-sm font-normal text-gray-500">
           As mentioned on your passport or government approved IDs
         </span>
       </h2>
@@ -25,7 +25,7 @@
           :key="opt"
           @click="salutation = opt"
           :class="[
-            'flex items-center space-x-1 px-4 py-2 border rounded-lg',
+            'flex items-center cursor-pointer space-x-1 px-4 py-2 border rounded-lg',
             salutation === opt
               ? 'bg-[#f9dcde] border-[#d82128] text-[#d82128]'
               : 'bg-white border-gray-300 text-gray-700'
@@ -46,7 +46,7 @@
     </div>
 
     <!-- Personal Info Form -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <!-- First Name -->
       <div>
         <label class="block text-sm font-medium mb-1">
@@ -106,7 +106,7 @@
           For booking confirmation & updates
         </span>
       </h2>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
         <!-- Mobile -->
       <div>
         <label class="block text-sm font-medium mb-1">

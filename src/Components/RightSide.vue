@@ -9,7 +9,7 @@
           <div
         @click="selected = 'cheapest'"
         :class="[
-          'flex  h-max space-x-2 justify-center md:justify-start cursor-pointer items-center p-2 rounded-lg shrink',
+          'flex  h-max space-x-2 justify-center lg:justify-start cursor-pointer items-center p-2 rounded-lg shrink',
           selected === 'cheapest'
             ? 'bg-[#f9dcde] border-b-2 border-[#d82128]'
             : 'bg-white'
@@ -17,7 +17,7 @@
       >
         <div
           :class="[
-            'p-3 rounded-lg hidden md:block',
+            'p-3 rounded-lg hidden lg:block',
             selected === 'cheapest' ? 'bg-[#d82128]' : ''
           ]"
         >
@@ -31,7 +31,7 @@
         </div>
         <div class="font-semibold">
           <div :class="[selected === 'cheapest' ? 'text-[#d82128]':'']">Cheapest</div>
-          <span class="text-xs hidden md:block"
+          <span class="text-xs hidden lg:block"
           :class="[selected === 'cheapest' ? 'text-[#d82128]':'']">19,000 tk</span>
         </div>
       </div>
@@ -40,7 +40,7 @@
            <div
         @click="selected = 'fastest'"
         :class="[
-          'flex h-max space-x-2 justify-center md:justify-start cursor-pointer items-center p-2 rounded-lg shrink',
+          'flex h-max space-x-2 justify-center lg:justify-start cursor-pointer items-center p-2 rounded-lg shrink',
           selected === 'fastest'
             ? 'bg-[#f9dcde] border-b-2 border-[#d82128]'
             : 'bg-white'
@@ -48,7 +48,7 @@
       >
         <div
           :class="[
-            'p-3 rounded-lg hidden md:block',
+            'p-3 rounded-lg hidden lg:block',
             selected === 'fastest' ? 'bg-[#d82128]' : ''
           ]"
         >
@@ -57,7 +57,7 @@
         </div>
         <div class="font-semibold">
           <div :class="[selected === 'fastest' ? 'text-[#d82128]':'']">Fastest</div>
-          <span class="text-xs hidden md:block"
+          <span class="text-xs hidden lg:block"
           :class="[selected === 'fastest' ? 'text-[#d82128]':'']">21h 30m</span>
         </div>
       </div>
@@ -66,7 +66,7 @@
             <div
         @click="selected = 'earliest'"
         :class="[
-          'flex h-max  space-x-2 justify-center md:justify-start cursor-pointer items-center p-2 rounded-lg shrink',
+          'flex h-max  space-x-2 justify-center lg:justify-start cursor-pointer items-center p-2 rounded-lg shrink',
           selected === 'earliest'
             ? 'bg-[#f9dcde] border-b-2 border-[#d82128]'
             : 'bg-white'
@@ -74,7 +74,7 @@
       >
         <div
           :class="[
-            'p-3 rounded-lg hidden md:block',
+            'p-3 rounded-lg hidden lg:block',
             selected === 'earliest' ? 'bg-[#d82128]' : ''
           ]"
         >
@@ -85,7 +85,7 @@
           <div 
           
           :class="[selected === 'earliest' ? 'text-[#d82128]':'']">Earliest</div>
-          <span class="text-xs hidden md:block" 
+          <span class="text-xs hidden lg:block" 
           :class="[selected === 'earliest' ? 'text-[#d82128]':'']">07:10</span>
         </div>
       </div>

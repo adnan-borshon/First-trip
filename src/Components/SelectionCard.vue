@@ -1,30 +1,30 @@
 <template>
-  <div class="relative md:grid grid-cols-3 gap-1 m-2 shrink-0 rounded-lg p-1 lg:p-2 bg-white overflow-hidden">
+  <div class="relative lg:grid grid-cols-3 gap-1 m-2 shrink-0 rounded-lg p-1 lg:p-2 bg-white overflow-hidden">
     <!-- for larger screen -->
  <div
-  class="hidden md:block absolute left-[66.22%] -translate-x-1/2 -top-2
+  class="hidden lg:block absolute left-[66.22%] -translate-x-1/2 -top-2
          h-5 w-5 rounded-full bg-gray-100"
 ></div>
 <div
-  class="hidden md:block absolute left-[66.22%] -translate-x-1/2 -bottom-2
+  class="hidden lg:block absolute left-[66.22%] -translate-x-1/2 -bottom-2
          h-5 w-5 rounded-full bg-gray-100"
 ></div>
 
 
       <!-- for mobile screen -->
     <div
-  class="md:hidden absolute top-[66%] -translate-y-1/2 -right-2.5
+  class="lg:hidden absolute top-[66%] -translate-y-1/2 -right-2.5
          h-6 w-6 rounded-full bg-gray-100"
 ></div>
 <div
-  class="md:hidden absolute top-[66%] -translate-y-1/2 -left-2.5
+  class="lg:hidden absolute top-[66%] -translate-y-1/2 -left-2.5
          h-6 w-6 rounded-full bg-gray-100"
 ></div>
 
 
       
     <div
-      class="col-span-2 h-max md:border-r border-dashed pr-3 border-gray-400 p-2"
+      class="col-span-2 h-max lg:border-r border-dashed pr-3 border-gray-400 p-2"
     >
       <!-- refund and seat left section -->
       <div class="flex justify-between">
@@ -51,14 +51,14 @@
       </div>
 
       <div
-        class="grid md:grid-cols-5 grid-cols-4 border-b border-dashed lg:border-solid lg:gap-3 border-gray-400 px-2 pb-4 md:py-5"
+        class="grid lg:grid-cols-5 grid-cols-4 border-b border-dashed lg:border-solid lg:gap-3 border-gray-400 px-2 pb-4 lg:py-5"
       >
         <div class="hidden lg:flex items-center justify-center p-1 ">
           <img class="h-12 w-12 p-1 bg-gray-100 rounded-full" :src="airline" />
           <div class="text-sm font-semibold text-black">US Bangla Airlines</div>
         </div>
         <div class="flex flex-col justify-center items-start p-1">
-          <span class="text-gray-500 text-xs hidden md:flex"
+          <span class="text-gray-500 text-xs hidden lg:flex"
             >22 May, Thursday
           </span>
           <span class="font-semibold">19:10</span>
@@ -70,7 +70,7 @@
           <span class="text-gray-500">Non-stop</span>
         </div>
         <div class="flex flex-col items-end justify-center p-1">
-          <span class="text-xs text-gray-500 hidden md:flex"
+          <span class="text-xs text-gray-500 hidden lg:flex"
             >22 May, Thursday
           </span>
           <span class="font-semibold">20:10</span>
@@ -89,7 +89,7 @@
       </div>
 
       <div
-        class="grid md:grid-cols-5 grid-cols-4 border-dashed lg:border-solid lg:gap-4 border-b pb-4 border-gray-400 px-2 md:py-5"
+        class="grid lg:grid-cols-5 grid-cols-4 border-dashed lg:border-solid lg:gap-4 border-b pb-4 border-gray-400 px-2 lg:py-5"
       >
         <div class="hidden lg:flex items-center justify-center p-1">
           <img class="h-12 w-12 p-1 bg-gray-100 rounded-full" :src="airline" />
@@ -98,7 +98,7 @@
 
 
         <div class="flex flex-col justify-center items-start p-1">
-          <span class="text-gray-500 text-xs hidden md:flex"
+          <span class="text-gray-500 text-xs hidden lg:flex"
             >22 May, Thursday
           </span>
           <span class="font-semibold">20:45</span>
@@ -110,7 +110,7 @@
           <span class="text-gray-500">Non-stop</span>
         </div>
         <div class="flex flex-col justify-center items-end p-1">
-          <span class="text-gray-500 text-xs hidden md:flex"
+          <span class="text-gray-500 text-xs hidden lg:flex"
             >22 May,thursday
           </span>
           <span class="font-semibold">21:50</span>
@@ -159,7 +159,7 @@
       </div>
     </div>
 
-    <div class="prices col-span-1 md:grid grid-rows-[auto_1fr_auto_auto] ">
+    <div class="prices col-span-1 lg:grid grid-rows-[auto_1fr_auto_auto] ">
       <!-- voucher part -->
       <div v-if="detailsOpen"
       class="font-semibold p-2 ">
@@ -189,14 +189,14 @@
 
  <div
  v-if="!detailsOpen"
-            class="px-2 hidden text-xs font-semibold md:flex justify-self-end items-center rounded-lg bg-[#f9dcde] text-[#d82128]"
+            class="px-2 hidden text-xs font-semibold lg:flex justify-self-end items-center rounded-lg bg-[#f9dcde] text-[#d82128]"
           >
             <img :src="voucher" class="h-8 w-8 rounded-lg mr-1" />
             <span class="text-xs">FTBGDOM</span>
           </div>
       <!-- for mobile view -->
-      <div class="flex justify-between p-2 md:hidden">
-        <div class="row-start-1 flex md:justify-end items-start">
+      <div class="flex justify-between p-2 lg:hidden">
+        <div class="row-start-1 flex lg:justify-end items-start">
           <div
             class="px-2 text-xs font-semibold flex items-center rounded-lg bg-[#f9dcde] text-[#d82128]"
           >
@@ -217,25 +217,25 @@
         
 
       <!-- empty -->
-      <div class="row-start-2 hidden md:block"></div>
+      <div class="row-start-2 hidden lg:block"></div>
       <!-- price -->
-      <div class="row-start-3 flex md:flex-col justify-end items-end">
+      <div class="row-start-3 flex lg:flex-col justify-end items-end">
         <div
           v-if="detailsOpen"
           class="row-start-1 flex justify-end items-start"
         >
           <div
-            class="px-2 hidden  text-xs font-semibold md:flex items-center rounded-lg bg-[#f9dcde] text-[#d82128]"
+            class="px-2 hidden  text-xs font-semibold lg:flex items-center rounded-lg bg-[#f9dcde] text-[#d82128]"
           >
             <img :src="voucher" class="h-8 w-8 rounded-lg mr-1" />
             <span class="text-xs">FTBGDOM</span>
           </div>
         </div>
-        <div class="price hidden md:block font-semibold text-[#d82128]">
+        <div class="price hidden lg:block font-semibold text-[#d82128]">
           <span class="font-semibold">BDT</span>
           <span class="text-xl font-bold">11,526</span>
         </div>
-        <div class="discount-price hidden md:block">
+        <div class="discount-price hidden lg:block">
           <span class="line-through decoration-1 decoration-gray-700"
             >BDT 12,897</span
           >

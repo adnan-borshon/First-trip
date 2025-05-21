@@ -1,6 +1,6 @@
 <template>
-<div class="container grid grid-rows-[200px_auto] bg-white rounded-xl mb-3 ">
-    <div class=" gap-3 row-span-2 grid grid-rows-1 px-4 py-2 ">
+<div class="container shrink-0  grid grid-rows-[200px_auto] bg-white rounded-xl mb-3 ">
+    <div class=" gap-3 row-span-2 grid grid-rows-1 px-4 py-2 shrink-0">
         <div class="flex flex-col ">
             <h2 class="font-semibold">Fare Summary</h2>
             <div class="flex justify-center items-center">
@@ -12,7 +12,7 @@
         <div class="space-y-2 ">
             <!-- Airfare part -->
             <div 
-            class=""
+            
                  :class="selectAirFare ? 'bg-blue-100 p-2 rounded-xl space-y-3' :''">
             <div class="flex justify-between ">
 

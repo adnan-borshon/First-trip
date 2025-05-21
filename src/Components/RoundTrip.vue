@@ -2,7 +2,7 @@
 
 <template >
   <div class="container bg-gray-100 mx-auto py-5 ">
-    <div class="flex gap-1 md:mx-30 bg-transparent ">
+    <div class="flex gap-1 lg:mx-30 bg-transparent ">
       <!-- Left Column -->
        
          <LeftSide :show-depart_return="true"/>
