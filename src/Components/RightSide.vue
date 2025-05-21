@@ -109,7 +109,10 @@
     <!-- main card for timing and selection -->
  
 
-    <SelectionCard  :plane-icon="plane"/>
+      <component 
+      :is="cardComponent" 
+       
+    />
  
  
   </div>
@@ -127,5 +130,11 @@ import { ref } from "vue";
 
 const selected = ref('cheapest')
 
-
+const props = defineProps({
+  // this prop controls which card to render
+  cardComponent: {
+    type: [Object, String],
+    default: SelectionCard
+  }
+});
 </script>

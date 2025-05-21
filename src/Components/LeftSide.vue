@@ -116,6 +116,12 @@
     v-model="selectedRefund"
     />
 
+    <FlightScheduleFilter
+      title="Flight Schedule"
+      :options="options"
+      v-model="selectedSchedule"
+    />
+
     <DropdownFilter
     title="Layover Airports"
      :options="LayoverOptions"
@@ -166,6 +172,7 @@
 </template>
 
 <script setup>
+import FlightScheduleFilter from './FlightScheduleFilter.vue';
 import { ref, computed, onMounted } from 'vue';
 import up_arrow from '../assets/Icons/up-arrow.png';
 import downs_arrow from '../assets/Icons/down-arrow.png';
@@ -173,6 +180,7 @@ import Clock from '../assets/Icons/clock.png';
 import left_arrow from "../assets/Icons/left.png"
 import right_arrow from "../assets/Icons/right.png"
 import DropdownFilter from './DropdownFilter.vue';
+
 const showPrice = ref(false);
 const price = ref(500);
 const time = 30 * 60; 
@@ -185,7 +193,7 @@ const selectedBaggage = ref([]);
 const selectedRefund = ref([]);
 const selectedLayover = ref([]);
 const selectedAircraft = ref([]);
-
+const selectedSchedule = ref([]);
 
 
 const props = defineProps({
@@ -269,7 +277,32 @@ const AircraftOptions= [
     }
   
 ]
-
+const options= [
+  {
+    value: 'early',
+    label: 'Early Morning',
+    time: '00:00–05:59',
+    icon: '',
+  },
+  {
+    value: 'morning',
+    label: 'Morning',
+    time: '06:00–11:59',
+    icon: '',
+  },
+  {
+    value: 'afternoon',
+    label: 'Afternoon',
+    time: '12:00–17:59',
+    icon: '',
+  },
+  {
+    value: 'evening',
+    label: 'Evening',
+    time: '18:00–23:59',
+    icon: ''
+  },
+]
 
 </script>
 

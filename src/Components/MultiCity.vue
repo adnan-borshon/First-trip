@@ -8,7 +8,10 @@
 
       <!-- Right Column -->
       <div class="right  flex-2/3 ">
-        <RightSide />
+          <RightSide 
+   
+    :cardComponent="MultiCityCard"
+  />
       
       </div>
     </div>
@@ -17,5 +20,6 @@
 
 <script setup>
 import LeftSide from './LeftSide.vue';
+import MultiCityCard from './MultiCityCard.vue';
 import RightSide from './RightSide.vue';
 </script>

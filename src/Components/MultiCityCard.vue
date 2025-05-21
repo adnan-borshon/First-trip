@@ -46,14 +46,20 @@
 
       <!-- for mobile -->
       <div class="flex items-center justify-start mt-4 lg:hidden">
-        <img class="h-8 w-8 p-1 rounded-lg" :src="airline" />
-        <div class="text-sm font-semibold text-black">US Bangla Airlines</div>
+        <img class="h-14 w-14 rounded-lg" :src="airline" />
+        <div class="text-sm flex flex-col font-semibold text-black">
+            <span>US Bangla Airline</span>
+            <span class="text-xs text-green-400">Trip-1</span>
+        </div>
       </div>
       <div
         class="grid lg:grid-cols-5 grid-cols-4 border-b border-dashed lg:border-solid lg:gap-3 border-gray-400 px-2 pb-4 lg:py-5"
       >
-        <div class="hidden lg:flex items-center justify-center p-1 ">
-          <img class="h-12 w-12 p-1 bg-gray-100 rounded-full" :src="airline" />
+        <div class="hidden lg:flex items-center justify-center p-1 space-x-2">
+            <div class="flex flex-col items-center">
+                <img class="object-contain  bg-gray-100 rounded-full" :src="airline" />
+                <span class=" text-green-400 text-[11px]">Trip-1</span>
+            </div>
           <div class="text-sm font-semibold text-black">US Bangla Airlines</div>
         </div>
         <div class="flex flex-col justify-center items-start p-1">
@@ -85,9 +91,10 @@
 
       <!-- for mobile -->
       <div class="flex items-center justify-start mt-4 lg:hidden">
-        <img class="h-8 w-8 p-1 rounded-lg" :src="airline" />
-        <div class="text-sm font-semibold text-black">
-          US Bangla Airline
+        <img class="h-14 w-14  rounded-lg" :src="airline" />
+        <div class="text-sm flex flex-col font-semibold text-black">
+            <span>US Bangla Airline</span>
+            <span class="text-xs text-green-400">Trip-1</span>
         </div>
       </div>
 
@@ -95,8 +102,11 @@
         class="grid lg:grid-cols-5 grid-cols-4 border-dashed lg:border-solid lg:gap-4 border-b pb-4 border-gray-400 px-2 lg:py-5"
       >
         <div class="hidden lg:flex items-center justify-center p-1">
-          <img class="h-12 w-12 p-1 bg-gray-100 rounded-full" :src="airline" />
-          <div class="text-sm font-semibold text-black">US Bangla Airlines</div>
+     <div class="flex flex-col items-center">
+                <img class="object-contain  bg-gray-100 rounded-full" :src="airline" />
+                <span class=" text-green-400 text-[11px]">Trip-1</span>
+            </div>
+                      <div class="text-sm font-semibold text-black">US Bangla Airlines</div>
         </div>
 
 
@@ -109,10 +119,11 @@
         </div>
         <div class="col-span-2 flex flex-col justify-center items-center p-1">
           <span class="font-semibold">1h 5m</span>
-          <img :src="plane" />
-          <span class="text-gray-500">Non-stop</span>
+          <img :src="MultiPlane" />
+          <span class="text-gray-500">1 Stop(Dhaka - 22h 30m)</span>
         </div>
         <div class="flex flex-col justify-center items-end p-1">
+            <span class="text-green-400 text-sm">+1 Days</span>
           <span class="text-gray-500 text-xs hidden lg:flex"
             >22 May,thursday
           </span>
@@ -259,6 +270,7 @@
 import seat from "../assets/Icons/seat.png";
 import taka from "../assets/Icons/taka.png";
 import plane from "../assets/Icons/layover-non-stop.svg";
+import MultiPlane from "../assets/Icons/layover-multi.svg"
 import like from "../assets/Icons/like.png";
 import up_arrow from "../assets/Icons/up-arrow.png";
 import downs_arrow from "../assets/Icons/down-arrow.png";
